@@ -2,7 +2,30 @@
 
 4K neon wallpaper + system file icons for Windows 10/11. One EXE, HKCU only, no admin.
 
-**Za co płacisz:** [RAPORT.md](RAPORT.md) — pipeline Win32, mastery 4096, TXT narysowany w kodzie, nie z generatora.
+Microsoft sprzedaje Ci „Personalizacja”: trzy suwaki, tapeta przeskalowana z 1080p, ikona TXT rozmazana na 16 px i uśmiech w Ustawieniach. To wstyd. Shell umie więcej od 1995. Oni dali ludziom panel, który nic nie rusza.
+
+PsychNeon wchodzi tam, gdzie Settings się boi: **klasyfikacja plików, jumbo imagelist, DWM, `SHChangeNotify`**. Nie klikasz motywu. Nadpisujesz to, co Explorer czyta przy starcie.
+
+**Za co płacisz:** [RAPORT.md](RAPORT.md)
+
+## Jak głęboko edytujemy Windows
+
+To nie skórka. To overlay na Shell.
+
+| Warstwa | Co nadpisujemy | API / klucz |
+|---|---|---|
+| Pulpit | tapeta 3840×2160, Stretch | `user32!SystemParametersInfo(SPI_SETDESKWALLPAPER)` + `HKCU\Control Panel\Desktop` (`Wallpaper`, `WallpaperStyle=2`) |
+| Foldery | ikona katalogu | `HKCU\Software\Classes\Directory\DefaultIcon`, `Folder\DefaultIcon` |
+| TXT / log / md / ini / csv | klasyczna kartka B/W, master 4096 | `txtfile\DefaultIcon`, `SystemFileAssociations\.txt` (i reszta) |
+| PDF / jpg / png / zip / mp4 / mp3 | DefaultIcon per typ | `SystemFileAssociations\.<ext>\DefaultIcon` + ProgID w HKCU |
+| PDF handler-safe | ikona bez kradzieży open | `HKCU\Software\Classes\PsychNeon.pdf` + `.pdf` |
+| Explorer refresh | bez killania `explorer.exe` | `shell32!SHChangeNotify(SHCNE_ASSOCCHANGED \| SHCNF_FLUSH)` |
+| Źródło ikon | prawdziwe jumbo 256 z systemu | `PrivateExtractIcons` z `shell32.dll` / `imageres.dll` / `wmploc.dll` |
+| 4K | 256 → 1024 → 4096 | Real-ESRGAN-ncnn-vulkan na GPU, potem LANCZOS do ICO 256…16 |
+
+**Czego nie ruszamy (celowo):** ikony `.exe` (zostają z binarki), czułość myszy, HKLM, usługi, driverów. Zero UAC. Całość w **HKCU** — Twój user, Twój Shell.
+
+Ustawienia Windows dają Ci JPEG 1920 i ikonę z 2006. My bierzemy ten sam Shell i karmimy go masterami 4K. Jak Microsoft nie umie zrobić kartki TXT, która nie wygląda jak gówno, to nie nasz problem — to ich.
 
 ## DDL
 
