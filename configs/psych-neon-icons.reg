@@ -1,0 +1,43 @@
+Windows Registry Editor Version 5.00
+
+; PsychNeon — HKCU file icons. Paths assume %LOCALAPPDATA%\PsychNeon
+; The installer writes the real absolute paths. This file is the map.
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\DefaultIcon]
+@="%LOCALAPPDATA%\\PsychNeon\\folder.ico,0"
+
+[HKEY_CURRENT_USER\Software\Classes\Folder\DefaultIcon]
+@="%LOCALAPPDATA%\\PsychNeon\\folder.ico,0"
+
+[HKEY_CURRENT_USER\Software\Classes\txtfile\DefaultIcon]
+@="%LOCALAPPDATA%\\PsychNeon\\txt.ico,0"
+
+[HKEY_CURRENT_USER\Software\Classes\jpegfile\DefaultIcon]
+@="%LOCALAPPDATA%\\PsychNeon\\image.ico,0"
+
+[HKEY_CURRENT_USER\Software\Classes\pngfile\DefaultIcon]
+@="%LOCALAPPDATA%\\PsychNeon\\image.ico,0"
+
+[HKEY_CURRENT_USER\Software\Classes\7-Zip.zip\DefaultIcon]
+@="%LOCALAPPDATA%\\PsychNeon\\zip.ico,0"
+
+[HKEY_CURRENT_USER\Software\Classes\CompressedFolder\DefaultIcon]
+@="%LOCALAPPDATA%\\PsychNeon\\zip.ico,0"
+
+[HKEY_CURRENT_USER\Software\Classes\.pdf]
+@="PsychNeon.pdf"
+
+[HKEY_CURRENT_USER\Software\Classes\PsychNeon.pdf\DefaultIcon]
+@="%LOCALAPPDATA%\\PsychNeon\\pdf.ico,0"
+
+[HKEY_CURRENT_USER\Software\Classes\SystemFileAssociations\.pdf\DefaultIcon]
+@="%LOCALAPPDATA%\\PsychNeon\\pdf.ico,0"
+
+[HKEY_CURRENT_USER\Software\Classes\SystemFileAssociations\.mp4\DefaultIcon]
+@="%LOCALAPPDATA%\\PsychNeon\\video.ico,0"
+
+[HKEY_CURRENT_USER\Software\Classes\SystemFileAssociations\.mp3\DefaultIcon]
+@="%LOCALAPPDATA%\\PsychNeon\\audio.ico,0"
+
+[HKEY_CURRENT_USER\Software\Classes\Unknown\DefaultIcon]
+@="%LOCALAPPDATA%\\PsychNeon\\file.ico,0"

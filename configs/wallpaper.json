@@ -1,0 +1,9 @@
+{
+  "name": "PsychNeon Sztos",
+  "file": "assets/wallpaper/favorite-neon-4k.jpg",
+  "resolution": "3840x2160",
+  "wallpaperStyle": "2",
+  "tileWallpaper": "0",
+  "api": "SystemParametersInfo(SPI_SETDESKWALLPAPER)",
+  "notes": "Original 4K neon abstract. Do not downscale."
+}

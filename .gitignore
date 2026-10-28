@@ -1,0 +1,9 @@
+bin/
+obj/
+dist/*.exe
+.vs/
+*.user
+tools/__pycache__/
+.DS_Store
+github.env
+*.token
