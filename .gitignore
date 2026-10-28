@@ -1,9 +1,12 @@
 bin/
 obj/
-dist/*.exe
+dist/
 .vs/
 *.user
 tools/__pycache__/
+tools/*.exe
+assets/icons/_esrgan_in/
+assets/icons/_esrgan_1k/
 .DS_Store
 github.env
 *.token

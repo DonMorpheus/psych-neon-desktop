@@ -2,6 +2,8 @@
 
 4K neon wallpaper + system file icons for Windows 10/11. One EXE, HKCU only, no admin.
 
+**Za co płacisz:** [RAPORT.md](RAPORT.md) — pipeline Win32, mastery 4096, TXT narysowany w kodzie, nie z generatora.
+
 ## DDL
 
 Release assets (direct download):
@@ -34,9 +36,19 @@ PsychNeon.exe /undo
 
 Does **not** touch `.exe` icons (those stay per-app). Does **not** change mouse speed.
 
-## Subscription drops
+## Cennik
 
-This repo is the public core. New palettes (pink bloom, warm gold, liquid) ship as extra packs on GitHub Releases. Follow the repo or sponsor for drop alerts.
+Płać na [GitHub Sponsors](https://github.com/sponsors/DonMorpheus) albo wypisz się na release — wrzucę Gumroad jak wstanie.
+
+| | PLN | USD |
+|---|---:|---:|
+| **Pack Sztos** — 4K tapeta + ikony systemowe + `PsychNeon.exe` | 29 zł | $7.99 |
+| **Sub miesięczna** — nowe palety / sezony | 19 zł/mc | $4.99/mo |
+| **Lifetime** — wszystkie packi, bez limitu | 99 zł | $29 |
+
+Core na GitHubie jest po to, żeby ktoś kliknął DDL i zobaczył. Kasa idzie za packi i suba.
+
+## Subscription drops
 
 Build from source:
 
